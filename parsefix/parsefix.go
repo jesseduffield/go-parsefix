@@ -73,11 +73,7 @@ func locationInfo(match []string) location {
 	return location{
 		file: match[1],
 
-		// Substract 1 from column, so we have a proper index
-		// into a line slice, but don't substract 1 from the
-		// line, since we have a sentinel line entry in
-		// the beginning.
-		line:   atoi(match[2]),
+		line:   atoi(match[2]) - 1,
 		column: atoi(match[3]) - 1,
 	}
 }
