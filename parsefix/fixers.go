@@ -24,11 +24,11 @@ func init() {
 		// 	','),
 
 		missingByteFixer(
-			`missing ',' in argument list`,
+			`missing ',' before newline in argument list`,
 			',', ')'),
 
 		missingByteFixer(
-			`missing ',' in parameter list`,
+			`missing ',' before newline in parameter list`,
 			',', ')'),
 
 		// missingByteFixer(

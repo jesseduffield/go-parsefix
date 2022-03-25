@@ -2,7 +2,6 @@ package parsefix
 
 import (
 	"bytes"
-	"fmt"
 )
 
 type fixerContext struct {
@@ -23,7 +22,6 @@ func (ctx *fixerContext) nextNonWhitespaceIs(b byte) bool {
 			switch line[col] {
 			// taken from unicode.IsSpace()
 			case '\t', '\n', '\v', '\f', '\r', ' ', 0x85, 0xA0:
-				fmt.Printf("%s\n", "whitespace")
 				continue
 			case b:
 				return true
