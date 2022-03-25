@@ -36,9 +36,9 @@ func init() {
 			`missing ',' before newline in composite literal`,
 			','),
 
-		missingByteFixer(
-			`missing ',' in composite literal`,
-			','),
+		// missingByteFixer(
+		// 	`missing ',' in composite literal`,
+		// 	','),
 
 		missingByteFixer(
 			`missing ',' in argument list`,
@@ -48,18 +48,12 @@ func init() {
 			`missing ',' in parameter list`,
 			','),
 
-		missingByteFixer(
-			`expected ':', found newline`,
-			':'),
+		// missingByteFixer(
+		// 	`expected ':', found newline`,
+		// 	':'),
 
-		missingByteFixer(
-			`expected ';', found `, ';'),
-
-		removeCaptureFixer(
-			`illegal character U\+[0-9A-F]+ '(.)'`),
-
-		removeCaptureFixer(
-			`expected statement, found '(.*)'`),
+		// missingByteFixer(
+		// 	`expected ';', found `, ';'),
 
 		replacingFixer(
 			`expected boolean or range expression, found assignment`,

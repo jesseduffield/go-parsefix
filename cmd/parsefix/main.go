@@ -11,8 +11,8 @@ import (
 	"log"
 	"os"
 
+	"github.com/jesseduffield/parsefix"
 	"github.com/pkg/errors"
-	"github.com/quasilyte/go-parsefix/parsefix"
 )
 
 type exitCode int
