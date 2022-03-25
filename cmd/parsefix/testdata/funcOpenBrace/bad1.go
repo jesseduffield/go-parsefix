@@ -1,5 +1,0 @@
-package testdata
-
-func f()
-{
-}
