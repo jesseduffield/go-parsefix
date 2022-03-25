@@ -11,7 +11,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/jesseduffield/parsefix"
+	"github.com/jesseduffield/go-parsefix/parsefix"
 	"github.com/pkg/errors"
 )
 
@@ -101,7 +101,7 @@ func runMain(argv *arguments) (exitCode, error) {
 	}
 
 	if argv.inplace {
-		if err := ioutil.WriteFile(argv.filename, repaired, 0644); err != nil {
+		if err := ioutil.WriteFile(argv.filename, repaired, 0o644); err != nil {
 			return errorExit, errors.Errorf("write inplace: %v", err)
 		}
 	} else {
