@@ -19,10 +19,6 @@ func init() {
 			`missing ',' before newline in composite literal`,
 			',', '}'),
 
-		// missingByteFixer(
-		// 	`missing ',' in composite literal`,
-		// 	','),
-
 		missingByteFixer(
 			`missing ',' before newline in argument list`,
 			',', ')'),
@@ -31,17 +27,21 @@ func init() {
 			`missing ',' before newline in parameter list`,
 			',', ')'),
 
+		replacingFixer(
+			`expected boolean or range expression, found assignment`,
+			`:= `,
+			`:= range `),
+
+		// missingByteFixer(
+		// 	`missing ',' in composite literal`,
+		// 	','),
+
 		// missingByteFixer(
 		// 	`expected ':', found newline`,
 		// 	':'),
 
 		// missingByteFixer(
 		// 	`expected ';', found `, ';'),
-
-		replacingFixer(
-			`expected boolean or range expression, found assignment`,
-			`:= `,
-			`:= range `),
 	}
 }
 
